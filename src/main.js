@@ -1,5 +1,4 @@
-const students = [
-    {
+const students = [{
         name: "Chris Miller",
         subject: "History",
         info: "Failed last exam",
@@ -76,7 +75,7 @@ const students = [
 
 const createStudentComponent = (name, student, info) => {
     return `
-    <div class="student">
+    <h1>Students Info</h1>
     <h4>Name: ${name}</h4>
     <p>Subject: ${student}</p>
     <p>Note: ${info}</p>
@@ -87,11 +86,11 @@ const createStudentComponent = (name, student, info) => {
 
 
 
-    
+
 const studentContainer = document.querySelector("#container")
 for (let i = 0; i < students.length; i++) {
     const student = students[i]
-    studentContainer.innerHTML += createStudentComponent (
+    studentContainer.innerHTML += createStudentComponent(
         student.name,
         student.subject,
         student.info
@@ -112,6 +111,3 @@ const greg = createStudentComponent(
     "Greg Lawrence",
     "History",
     "Sub-par performance all around")
-
-
-   
